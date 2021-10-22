@@ -1,7 +1,6 @@
 const NumButtons = document.getElementsByClassName("number");
-// const OperatorButtons = document.getElementsByClassName("operator");
 const resultLog = document.getElementById("result");
-// const operatorsRegex = /^(\+|-|\*|\/|=|>|<|>=|<=|&|\||%|!|\^|\(|\))$/;
+// const regexOperators = /^(\+|-|\*|\/|>|<|>=|<=|&|\||%|!|\^|\(|\))$/;
 
 
 for (button of NumButtons){
@@ -11,14 +10,13 @@ for (button of NumButtons){
 // Take the value of the button and show it in the result div
 function getEntry() {
     value = this.innerHTML;
-    let validation = resultLog.innerHTML += value;
-    return validation;
+    resultLog.innerHTML += value;
 }               
 
 function calc() {
     let calcul = resultLog.innerHTML;
     let result = eval(calcul);
-    resultLog.innerHTML = result;
+    resultLog.innerHTML = result; 
 }
 
 function erase(){
